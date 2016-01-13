@@ -8,5 +8,15 @@ class Item
     @quality = quality
   end
 
+  def legendary?
+    @name == "Sulfuras, Hand of Ragnaros"
+  end
 
+  def expired?
+    @sell_in < 0
+  end
+
+  def backstage_passes?
+    @name == "Backstage passes to a TAFKAL80ETC concert"
+  end
 end
